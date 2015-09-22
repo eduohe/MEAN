@@ -1,0 +1,9 @@
+h1 User List
+
+a(href="#/create") New
+
+ul(ng-init="load()")
+	li(ng-repeat="user in users")
+		a(href="#/edit/{{ user._id }}")
+			{{ user.name }} - {{ user.email }} - 
+			a(ng-click="delete(user._id); load();") Delete
